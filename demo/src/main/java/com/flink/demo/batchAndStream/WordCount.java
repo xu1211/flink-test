@@ -1,10 +1,9 @@
-package com.flink.demo;
+package com.flink.demo.batchAndStream;
 
-import org.apache.flink.api.common.functions.FlatMapFunction;
+import com.flink.demo.MyFlatMapper;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.util.Collector;
 
 /**
  * @author cosmoxu
@@ -12,7 +11,7 @@ import org.apache.flink.util.Collector;
  */
 public class WordCount {
     public static void main(String[] args) throws Exception {
-        // 创建执行环境
+        // 创建执行环境 ExecutionEnvironment
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         // 从文件中读取数据
         String inputPath = "file:////Users/yuchunxu/Documents/GitHub/xu/flink-test/demo/src/main/resources/word.txt";
